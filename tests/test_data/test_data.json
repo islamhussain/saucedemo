@@ -49,7 +49,7 @@
         {
             "id": "T006",
             "description": "UI element visibility test",
-            "category": "uielements",
+            "category": "ui_elements",
             "tags": ["visual", "ui"],
             "expected_result": {
                 "elements": [

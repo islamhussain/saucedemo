@@ -1,0 +1,107 @@
+{
+    "tests": [
+        {
+            "id": "P001",
+            "description": "Product page visibility test",
+            "category": "product_page",
+            "tags": ["smoke", "sanity", "positive"],
+            "expected_result": "div.inventory_list",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "P002",
+            "description": "Incorrect product detail test with problem_user",
+            "category": "product_page",
+            "tags": ["negative"],
+            "product_name": "Sauce Labs Backpack",
+            "expected_result": ".error-message-container",
+            "username": "problem_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "P003",
+            "description": "Product page load time test",
+            "category": "product_page",
+            "tags": ["performance"],
+            "expected_result": "div.inventory_list",
+            "max_load_time": 2000,
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "P004",
+            "description": "UI element visibility test",
+            "category": "ui_elements",
+            "tags": ["visual", "ui"],
+            "expected_result": {
+                "elements": [
+                    {"id": "inventory_container", "visible": true},
+                    {"id": "shopping_cart_container", "visible": true}
+                ]
+            },
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "P005",
+            "description": "Add product to cart test",
+            "category": "add_to_cart",
+            "tags": ["functional"],
+            "product_name": "Sauce Labs Backpack",
+            "expected_result": "span.shopping_cart_badge",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "P006",
+            "description": "Remove product from cart test",
+            "category": "remove_from_cart",
+            "tags": ["functional"],
+            "product_name": "Sauce Labs Backpack",
+            "expected_result": "button[data-test='add-to-cart-sauce-labs-backpack']",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "P007",
+            "description": "Inventory list validation test",
+            "category": "inventory_list_validation",
+            "tags": ["sanity", "positive"],
+            "items": [
+                {
+                    "name": "Sauce Labs Backpack",
+                    "price": "$29.99",
+                    "image": "sauce-backpack"
+                },
+                {
+                    "name": "Sauce Labs Bike Light",
+                    "price": "$9.99",
+                    "image": "bike-light"
+                },
+                {
+                    "name": "Sauce Labs Bolt T-Shirt",
+                    "price": "$15.99",
+                    "image": "bolt-shirt"
+                },
+                {
+                    "name": "Sauce Labs Fleece Jacket",
+                    "price": "$49.99",
+                    "image": "sauce-pullover"
+                },
+                {
+                    "name": "Sauce Labs Onesie",
+                    "price": "$7.99",
+                    "image": "onesie"
+                },
+                {
+                    "name": "Test.allTheThings() T-Shirt (Red)",
+                    "price": "$15.99",
+                    "image": "red-tatt"
+                }
+            ],
+            "username": "standard_user",
+            "password": "secret_sauce"
+        }
+    ]
+}

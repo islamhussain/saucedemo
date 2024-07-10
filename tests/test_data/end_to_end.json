@@ -1,0 +1,16 @@
+{
+    "tests": [
+      {
+            "id": "E001",
+            "description": "End-to-end purchase product test",
+            "category": "end_to_end",
+            "tags": ["end_to_end", "positive"],
+            "product_name": "Sauce Labs Backpack",
+            "first_name": "John",
+            "last_name": "Doe",
+            "postal_code": "12345",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        }
+    ]
+}

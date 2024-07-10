@@ -5,3 +5,4 @@ pytest-xdist
 pytest-metadata
 pyaml
 webdriver-manager
+pytest-dependency

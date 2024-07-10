@@ -1,3 +1,4 @@
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -16,3 +17,11 @@ def perform_action(driver, action_type, element_identifier, value=None, timeout=
     # Add more actions as needed
     else:
         raise ValueError(f"Unsupported action type: {action_type}")
+
+
+def is_displayed(driver, locator, timeout=10):
+    try:
+        element = WebDriverWait(driver, timeout).until(EC.visibility_of_element_located(locator))
+        return element.is_displayed()
+    except (TimeoutException, NoSuchElementException):
+        return False

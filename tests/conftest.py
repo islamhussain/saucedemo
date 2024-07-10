@@ -1,18 +1,31 @@
 import pytest
+from selenium.webdriver.common.by import By
 
 from tests.utils.data_loader import load_test_data, get_config_value, load_config
+from tests.utils.data_merger import merge_test_data
 from tests.utils.logger import get_logger
+from tests.utils.web_action import perform_action
 from tests.utils.webdriver_setup import get_driver
+from tests.utils.xpaths import XPaths
 
 logger = get_logger()
 
 
+def resolve_test_data(obj):
+    test_data_dir = obj.config.getoption("--test_data_dir")
+    test_data_file = obj.config.getoption("--test_data_file")
+    if test_data_dir:
+        test_data = merge_test_data(directory=test_data_dir)
+    elif test_data_file:
+        test_data = merge_test_data(file_path=test_data_file)
+    else:
+        raise ValueError("Either --test_data_dir or --test_data_file must be provided")
+    return test_data
+
+
 @pytest.fixture(scope='session')
 def test_data(request):
-    data_file = request.config.getoption("--data-file")
-    if not data_file:
-        data_file = "test_data/test_data.json"
-    return load_test_data(data_file)
+    resolve_test_data(request)
 
 
 @pytest.fixture(scope='module')
@@ -31,40 +44,45 @@ def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default=get_config_value('browser', config['default']['browser']))
     parser.addoption("--tags", action="store", default=get_config_value('tags', config['default']['tags']))
     parser.addoption("--headless", action="store_true", default=False, help="Run tests in headless mode")
-    parser.addoption("--data-file", action="store", default=None, help="Path to the test data file")
+    parser.addoption("--test_data_dir", action="store", default=None, help="Directory containing test data JSON files")
+    parser.addoption("--test_data_file", action="store", default=None,
+                     help="File path for a single test data JSON file")
 
 
-def filter_test_cases(test_data, category, tags):
+def filter_test_cases(test_data, tags):
     if tags != "all":
         tag_list = tags.split(',')
-        return [test for test in test_data['tests'] if
-                test['category'] == category and any(tag in test['tags'] for tag in tag_list)]
-    return [test for test in test_data['tests'] if test['category'] == category]
-
-
-@pytest.fixture(scope='session', autouse=True)
-def reset_cache(request):
-    yield
-    request.config.cache.set("test_data", None)
+        return [test for test in test_data['tests'] if any(tag in test['tags'] for tag in tag_list)]
+    return test_data['tests']
 
 
 def pytest_generate_tests(metafunc):
-
     if 'test_case' in metafunc.fixturenames:
-        category = metafunc.cls.__name__.replace('Test', '').lower()
+        test_data = resolve_test_data(metafunc)
         tags = metafunc.config.getoption('tags')
-        test_data = metafunc.config.cache.get("test_data", None)
-        if not test_data:
-            test_data = load_test_data(metafunc.config.getoption("--data-file") or "test_data/test_data.json")
-            metafunc.config.cache.set("test_data", test_data)
-        filtered_tests = filter_test_cases(test_data, category, tags)
-        metafunc.parametrize("test_case", filtered_tests)
+        filtered_tests = filter_test_cases(test_data, tags)
+        function_name = metafunc.function.__name__.replace('test_', '')
+        category_tests = [test for test in filtered_tests if test['category'] == function_name]
+        metafunc.parametrize("test_case", category_tests, ids=[tc['id'] for tc in category_tests])
+
+
+@pytest.fixture(scope='function')
+def login(driver, request, test_case):
+    username = test_case.get('username', 'standard_user')
+    password = test_case.get('password', 'secret_sauce')
+
+    driver.get("https://www.saucedemo.com/")
+    perform_action(driver, "send_keys", XPaths.USERNAME_FIELD, username)
+    perform_action(driver, "send_keys", XPaths.PASSWORD_FIELD, password)
+    perform_action(driver, "click", XPaths.LOGIN_BUTTON)
+    yield
+    perform_action(driver, "click", XPaths.BURGER_MENU_BUTTON)
+    perform_action(driver, "click", XPaths.LOGOUT_SIDEBAR_LINK)
 
 
 def pytest_configure(config):
     config.option.metadata = {
         'Project Name': 'Swag Labs Automation',
-        'Module Name': 'Login',
         'Tester': 'Pathan'
     }
 
