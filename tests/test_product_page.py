@@ -86,7 +86,7 @@ class TestProductPage:
                 product_price = item['price']
                 product_image = item['image']
 
-                product_name_xpath = generate_xpath(XPaths.PRODUCT_NAME, product_name=product_name)
+                product_name_xpath = generate_xpath(XPaths.DIV_TEXT_EQUALS, product_name=product_name)
                 perform_action(driver, "wait_for_visibility", (By.XPATH, product_name_xpath))
 
                 # Scroll to the element if it's available in DOM

@@ -16,4 +16,6 @@ class XPaths:
     PRODUCT_PRICE = "//div[text()='{product_name}']/../../../div[@class='pricebar']/div"
     PRODUCT_IMAGE = "//div[text()='{product_name}']/../../../../div[@class='inventory_item_img']/a" \
                     "/img[contains(@src,'{product_image}')]"
-    PRODUCT_NAME = "//div[text()='{product_name}']"
+    DIV_TEXT_EQUALS = "//div[text()='{product_name}']"
+    DIV_CLASS_EQUALS = "//div[@class='{css}']"
+    BACK_TO_PRODUCTS_BUTTON = (By.CLASS_NAME, "inventory_details_back_button")

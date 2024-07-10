@@ -1,0 +1,49 @@
+{
+    "tests": [
+        {
+            "id": "I001",
+            "description": "View product details",
+            "category": "view_product_details",
+            "tags": ["smoke", "sanity", "positive"],
+            "product_name": "Sauce Labs Backpack",
+            "price_css": "inventory_details_price",
+            "expected_result": {
+                "name": "Sauce Labs Backpack",
+                "price": "$29.99",
+                "description": "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."
+            },
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "I002",
+            "description": "Add item to cart from item page",
+            "category": "add_item_to_cart",
+            "tags": ["functional"],
+            "product_name": "Sauce Labs Backpack",
+            "expected_result": "span.shopping_cart_badge",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "I003",
+            "description": "Remove item from cart from item page",
+            "category": "remove_item_from_cart",
+            "tags": ["functional"],
+            "product_name": "Sauce Labs Backpack",
+            "expected_result": "button[data-test='add-to-cart-sauce-labs-backpack']",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "I004",
+            "description": "Navigate back to products from item page",
+            "category": "back_to_products",
+            "tags": ["navigation"],
+            "product_name": "Sauce Labs Backpack",
+            "expected_result": "inventory.html",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        }
+    ]
+}
