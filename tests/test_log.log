@@ -1,0 +1,224 @@
+2024-07-09 23:28:17,856 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-09 23:28:17,856 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-09 23:28:22,098 - SwagLabsTest - INFO - Test T001 passed
+2024-07-09 23:28:22,098 - SwagLabsTest - INFO - Test T001 passed
+2024-07-09 23:37:19,345 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-09 23:37:19,345 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-09 23:37:22,710 - SwagLabsTest - INFO - Test T001 passed
+2024-07-09 23:37:22,710 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:08:59,422 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:08:59,422 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:09:02,837 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:09:02,837 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:09:23,658 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:09:23,658 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:09:26,783 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:09:26,783 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:10:27,202 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:10:27,202 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:10:30,186 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:10:30,186 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:11:14,564 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:11:14,564 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:11:17,534 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:11:17,534 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:21:32,108 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:21:32,108 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:21:35,595 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:21:35,595 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:21:35,599 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:21:35,599 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:21:36,055 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:21:36,055 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:21:36,066 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:21:36,066 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:21:36,521 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:21:36,521 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:22:35,949 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:22:35,949 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:22:39,130 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:22:39,130 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:22:39,136 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:22:39,136 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:22:39,650 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:22:39,650 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:22:39,654 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:22:39,654 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:22:40,076 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:22:40,076 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:25:10,613 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:25:10,613 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:25:13,859 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:25:13,859 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:25:13,864 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:25:13,864 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:25:14,548 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:25:14,548 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:25:14,567 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:25:14,567 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:25:15,129 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:25:15,129 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:27:23,292 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:27:23,292 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:27:26,854 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:27:26,854 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:27:26,860 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:27:26,860 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:27:27,512 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:27:27,512 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:27:27,518 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:27:27,518 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:27:28,112 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:27:28,112 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:27:28,117 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 00:27:28,117 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 00:27:28,721 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 00:27:28,721 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 00:27:28,727 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 00:27:28,727 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 00:27:29,254 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 00:27:29,254 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 00:27:29,259 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 00:27:29,259 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 00:29:15,510 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:29:15,510 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 00:29:18,716 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:29:18,716 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 00:29:18,722 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:29:18,722 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 00:29:19,210 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:29:19,210 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 00:29:19,216 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:29:19,216 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 00:29:19,606 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:29:19,606 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 00:29:19,610 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 00:29:19,610 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 00:29:20,175 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 00:29:20,175 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 00:29:20,180 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 00:29:20,180 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 00:29:20,574 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 00:29:20,574 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 00:29:20,578 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 00:29:20,578 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 00:30:54,249 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 00:30:54,249 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 00:30:57,566 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 00:30:57,566 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 00:31:08,454 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 00:31:08,454 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 00:31:12,098 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 00:31:12,098 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 00:31:34,473 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 00:31:34,473 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 09:44:45,948 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 09:44:45,948 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:12:26,110 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:12:26,110 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:12:29,371 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:12:29,371 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:14:10,826 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:14:10,826 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:14:13,706 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:14:13,706 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:15:55,878 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:15:55,878 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:15:59,219 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:15:59,219 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:16:25,212 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:16:25,212 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:16:28,301 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:16:28,301 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:16:59,793 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:16:59,793 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:17:02,828 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:17:02,828 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:17:02,833 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:17:02,833 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:17:03,139 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:17:03,139 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:17:32,763 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:17:32,763 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:17:32,839 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:17:32,839 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:17:35,763 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:17:35,763 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:17:36,123 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:17:36,123 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:17:49,053 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 10:17:49,053 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 10:17:49,069 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 10:17:49,069 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 10:17:49,237 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:17:49,237 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:17:52,358 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 10:17:52,358 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 10:17:52,368 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 10:17:52,368 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 10:17:52,573 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:17:52,573 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:17:52,581 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 10:17:52,581 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 10:17:52,985 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 10:17:52,985 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 10:17:53,713 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 10:17:53,713 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 10:17:56,641 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 10:17:56,641 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 10:17:56,661 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:17:56,661 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:17:56,955 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:17:56,955 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:20:25,987 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:20:25,987 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:20:28,633 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:20:28,633 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:21:38,327 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:21:38,327 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:21:38,411 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 10:21:38,411 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 10:21:38,489 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 10:21:38,489 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 10:21:38,513 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 10:21:38,513 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 10:21:42,386 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:21:42,386 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:21:42,414 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 10:21:42,414 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 10:21:42,444 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 10:21:42,444 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 10:21:42,467 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:21:42,467 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:21:42,486 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 10:21:42,486 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 10:21:42,688 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 10:21:42,688 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 10:21:42,806 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:21:42,806 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:21:43,093 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 10:21:43,093 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 10:22:00,339 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:22:00,339 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-10 10:22:03,302 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:22:03,302 - SwagLabsTest - INFO - Test T001 passed
+2024-07-10 10:22:03,306 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 10:22:03,306 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-10 10:22:03,773 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 10:22:03,773 - SwagLabsTest - INFO - Test T002 passed
+2024-07-10 10:22:03,776 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 10:22:03,776 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-10 10:22:04,356 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 10:22:04,356 - SwagLabsTest - INFO - Test T003 passed
+2024-07-10 10:22:04,360 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 10:22:04,360 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-10 10:22:05,018 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 10:22:05,018 - SwagLabsTest - INFO - Test T004 passed
+2024-07-10 10:22:05,023 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 10:22:05,023 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-10 10:22:05,595 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 10:22:05,595 - SwagLabsTest - INFO - Test T005 passed
+2024-07-10 10:22:05,607 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:22:05,607 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-10 10:22:05,823 - SwagLabsTest - INFO - Test T006 passed
+2024-07-10 10:22:05,823 - SwagLabsTest - INFO - Test T006 passed

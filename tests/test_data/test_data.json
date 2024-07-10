@@ -1,0 +1,63 @@
+{
+    "tests": [
+        {
+            "id": "T001",
+            "description": "Valid login test",
+            "category": "login",
+            "tags": ["smoke", "sanity", "positive"],
+            "username": "standard_user",
+            "password": "secret_sauce",
+            "expected_result": "inventory.html"
+        },
+        {
+            "id": "T002",
+            "description": "Invalid login test",
+            "category": "login",
+            "tags": ["negative", "sanity"],
+            "username": "invalid_user",
+            "password": "invalid_password",
+            "expected_result": ".error-message-container"
+        },
+        {
+            "id": "T003",
+            "description": "Locked out user login test",
+            "category": "login",
+            "tags": ["negative", "regression"],
+            "username": "locked_out_user",
+            "password": "secret_sauce",
+            "expected_result": ".error-message-container"
+        },
+        {
+            "id": "T004",
+            "description": "SQL injection test",
+            "category": "login",
+            "tags": ["security", "negative"],
+            "username": "' OR '1'='1",
+            "password": "' OR '1'='1",
+            "expected_result": ".error-message-container"
+        },
+        {
+            "id": "T005",
+            "description": "Page load time test",
+            "category": "login",
+            "tags": ["performance"],
+            "username": "standard_user",
+            "password": "secret_sauce",
+            "expected_result": "inventory.html",
+            "max_load_time": 2000
+        },
+        {
+            "id": "T006",
+            "description": "UI element visibility test",
+            "category": "uielements",
+            "tags": ["visual", "ui"],
+            "expected_result": {
+                "elements": [
+                    {"id": "user-name", "visible": true},
+                    {"id": "password", "visible": true},
+                    {"id": "login-button", "visible": true}
+                ]
+            }
+        }
+    ]
+}

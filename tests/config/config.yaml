@@ -1,0 +1,7 @@
+default:
+  browser: chrome
+  tags: all
+
+test:
+  browser: firefox
+  tags: smoke
