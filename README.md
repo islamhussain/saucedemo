@@ -34,16 +34,19 @@ This framework is designed for automated testing of the Swag Labs application us
 
 1. **Run all tests:**
    ```bash
-   pytest --browser=chrome --headless --tags=all --test_data_dir=tests/test_data/
+   cd tests
+   pytest --browser=chrome --headless --tags=all --test_data_dir=test_data/
    ```
 
 2. **Run specific tests:**
    ```bash
+   cd tests
    pytest tests/test_product_page.py --browser=firefox --tags=smoke --test_data_file=tests/test_data/product_page.json
    ```
 
 3. **Generate HTML report:**
    ```bash
+   cd tests
    pytest --html=reports/report.html
    ```
 
@@ -51,6 +54,7 @@ This framework is designed for automated testing of the Swag Labs application us
 To run tests using custom test data, provide either the directory path or the JSON file path of the test data:
 
 ```bash
+cd tests
 # Using a directory of test data files
 pytest --test_data_dir=/path/to/custom/test_data/
 
@@ -151,5 +155,10 @@ class TestLogin:
             assert False, "Login test failed"
         logger.info(f"Test {test_case['id']} passed")
 ```
+
+#### Future Scope
+1. Enabling multi threading over test classes
+2. Low code solution and more data driven 
+
 
 This README provides a comprehensive guide to setting up, configuring, and running tests with the Swag Labs Automation Framework.
