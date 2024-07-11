@@ -159,6 +159,6 @@ class TestLogin:
 #### Future Scope
 1. Enabling multi threading over test classes
 2. Low code solution and more data driven 
-
+3. Add CI/CD and DockerFile
 
 This README provides a comprehensive guide to setting up, configuring, and running tests with the Swag Labs Automation Framework.
