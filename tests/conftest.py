@@ -1,5 +1,4 @@
 import pytest
-from selenium.webdriver.common.by import By
 
 from tests.utils.data_loader import load_test_data, get_config_value, load_config
 from tests.utils.data_merger import merge_test_data
@@ -66,8 +65,28 @@ def pytest_generate_tests(metafunc):
         metafunc.parametrize("test_case", category_tests, ids=[tc['id'] for tc in category_tests])
 
 
+@pytest.fixture
+def reset_app_state(login, driver):
+    perform_action(driver, "click", XPaths.BURGER_MENU_BUTTON)
+    perform_action(driver, "click", XPaths.RESET_APP_STATE)
+
+
+@pytest.fixture(scope='class', autouse=True)
+def reset_app_state_class(driver):
+    username = 'standard_user'
+    password = 'secret_sauce'
+
+    driver.get("https://www.saucedemo.com/")
+    perform_action(driver, "send_keys", XPaths.USERNAME_FIELD, username)
+    perform_action(driver, "send_keys", XPaths.PASSWORD_FIELD, password)
+    perform_action(driver, "click", XPaths.LOGIN_BUTTON)
+    perform_action(driver, "click", XPaths.BURGER_MENU_BUTTON)
+    perform_action(driver, "click", XPaths.RESET_APP_STATE)
+    perform_action(driver, "click", XPaths.LOGOUT_SIDEBAR_LINK)
+
+
 @pytest.fixture(scope='function')
-def login(driver, request, test_case):
+def login(driver, test_case):
     username = test_case.get('username', 'standard_user')
     password = test_case.get('password', 'secret_sauce')
 
@@ -76,8 +95,11 @@ def login(driver, request, test_case):
     perform_action(driver, "send_keys", XPaths.PASSWORD_FIELD, password)
     perform_action(driver, "click", XPaths.LOGIN_BUTTON)
     yield
-    perform_action(driver, "click", XPaths.BURGER_MENU_BUTTON)
-    perform_action(driver, "click", XPaths.LOGOUT_SIDEBAR_LINK)
+    try:
+        perform_action(driver, "click", XPaths.BURGER_MENU_BUTTON)
+        perform_action(driver, "click", XPaths.LOGOUT_SIDEBAR_LINK)
+    except:
+        pass
 
 
 def pytest_configure(config):

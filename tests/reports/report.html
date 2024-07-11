@@ -243,10 +243,10 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 10-Jul-2024 at 16:33:54 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 12-Jul-2024 at 01:52:35 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Summary</h2>
-    <p>1 tests ran in 8.02 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>32 tests ran in 125.58 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">30 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">1 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">2 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -257,17 +257,742 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="xfailed results-table-row">
+        <tr>
+          <td class="col-result">XFailed</td>
+          <td class="col-name">test_checkout_page.py::TestCheckoutPage::test_checkout_cases[CO005]</td>
+          <td class="col-duration">2.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;tests.test_checkout_page.TestCheckoutPage object at 0x7f424a626f80&gt;<br/>driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;53ee320f7db0685035b28a583ab0ea75&quot;)&gt;<br/>test_case = {&#x27;category&#x27;: &#x27;checkout_cases&#x27;, &#x27;description&#x27;: &#x27;Fuzzy data in postal code&#x27;, &#x27;expected_error&#x27;: &#x27;Error: Postal Code must be numeric&#x27;, &#x27;first_name&#x27;: &#x27;1234&#x27;, ...}<br/>reset_app_state = None<br/><br/>    def test_checkout_cases(self, driver, test_case, reset_app_state):<br/>        if test_case.get(&#x27;xfail&#x27;, False):<br/>&gt;           pytest.xfail(&quot;Expected failure due to fuzzy data&quot;)<br/><span class="error">E           _pytest.outcomes.XFailed: Expected failure due to fuzzy data</span><br/><br/>test_checkout_page.py:52: XFailed<br/></div></td></tr></tbody>
+      <tbody class="xfailed results-table-row">
+        <tr>
+          <td class="col-result">XFailed</td>
+          <td class="col-name">test_shopping_cart.py::TestShoppingCart::test_empty_cart_checkout[SC005]</td>
+          <td class="col-duration">11.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;tests.test_shopping_cart.TestShoppingCart object at 0x7f424a473190&gt;<br/>driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;c865506c64e72a763e85ba42583a07df&quot;)&gt;<br/>test_case = {&#x27;category&#x27;: &#x27;empty_cart_checkout&#x27;, &#x27;description&#x27;: &#x27;Attempt to checkout with an empty cart&#x27;, &#x27;id&#x27;: &#x27;SC005&#x27;, &#x27;password&#x27;: &#x27;secret_sauce&#x27;, ...}<br/><br/>    @pytest.mark.xfail(reason=&quot;No error is thrown on empty cart checkout&quot;)<br/>    def test_empty_cart_checkout(self, driver, test_case):<br/>        logger.info(f&quot;Executing test: {test_case[&#x27;description&#x27;]} with ID: {test_case[&#x27;id&#x27;]}&quot;)<br/>        driver.get(&quot;https://www.saucedemo.com/cart.html&quot;)<br/>    <br/>        perform_action(driver, &quot;click&quot;, XPaths.CHECKOUT_BUTTON)<br/>    <br/>        error_message_xpath = generate_xpath(XPaths.DIV_TEXT_EQUALS, product_name=&quot;Error: No items in your cart.&quot;)<br/>&gt;       assert is_displayed(driver, (By.XPATH, error_message_xpath))<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = is_displayed(&lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;c865506c64e72a763e85ba42583a07df&quot;)&gt;, (&#x27;xpath&#x27;, &quot;//div[text()=&#x27;Error: No items in your cart.&#x27;]&quot;))</span><br/><br/>test_shopping_cart.py:85: AssertionError<br/> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:52:06,061 - SwagLabsTest - INFO - Executing test: Attempt to checkout with an empty cart with ID: SC005
+2024-07-12 01:52:06,061 - SwagLabsTest - INFO - Executing test: Attempt to checkout with an empty cart with ID: SC005
+2024-07-12 01:52:06,061 - SwagLabsTest - INFO - Executing test: Attempt to checkout with an empty cart with ID: SC005
+2024-07-12 01:52:06,061 - SwagLabsTest - INFO - Executing test: Attempt to checkout with an empty cart with ID: SC005
+2024-07-12 01:52:06,061 - SwagLabsTest - INFO - Executing test: Attempt to checkout with an empty cart with ID: SC005
+2024-07-12 01:52:06,061 - SwagLabsTest - INFO - Executing test: Attempt to checkout with an empty cart with ID: SC005
+2024-07-12 01:52:06,061 - SwagLabsTest - INFO - Executing test: Attempt to checkout with an empty cart with ID: SC005
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_shopping_cart.py:79 Executing test: Attempt to checkout with an empty cart with ID: SC005<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">test_product_page.py::TestProductPage::test_remove_from_cart[P006]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/pathan/miniconda3/envs/saucedemo/lib/python3.10/site-packages/pytest_dependency.py&#x27;, 103, &#x27;Skipped: test_remove_from_cart[P006] depends on TestProductPage::test_add_to_cart&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_checkout_page.py::TestCheckoutPage::test_cancel_checkout[C0006]</td>
+          <td class="col-duration">6.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:50:35,731 - SwagLabsTest - INFO - Executing test: Test cancel checkout with ID: C0006
+2024-07-12 01:50:35,731 - SwagLabsTest - INFO - Executing test: Test cancel checkout with ID: C0006
+2024-07-12 01:50:35,731 - SwagLabsTest - INFO - Executing test: Test cancel checkout with ID: C0006
+2024-07-12 01:50:35,731 - SwagLabsTest - INFO - Executing test: Test cancel checkout with ID: C0006
+2024-07-12 01:50:35,731 - SwagLabsTest - INFO - Executing test: Test cancel checkout with ID: C0006
+2024-07-12 01:50:35,731 - SwagLabsTest - INFO - Executing test: Test cancel checkout with ID: C0006
+2024-07-12 01:50:35,731 - SwagLabsTest - INFO - Executing test: Test cancel checkout with ID: C0006
+2024-07-12 01:50:35,909 - SwagLabsTest - INFO - Test C0006 passed
+2024-07-12 01:50:35,909 - SwagLabsTest - INFO - Test C0006 passed
+2024-07-12 01:50:35,909 - SwagLabsTest - INFO - Test C0006 passed
+2024-07-12 01:50:35,909 - SwagLabsTest - INFO - Test C0006 passed
+2024-07-12 01:50:35,909 - SwagLabsTest - INFO - Test C0006 passed
+2024-07-12 01:50:35,909 - SwagLabsTest - INFO - Test C0006 passed
+2024-07-12 01:50:35,909 - SwagLabsTest - INFO - Test C0006 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_checkout_page.py:42 Executing test: Test cancel checkout with ID: C0006
+INFO     SwagLabsTest:test_checkout_page.py:48 Test C0006 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_checkout_page.py::TestCheckoutPage::test_checkout_cases[CO001]</td>
+          <td class="col-duration">2.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:50:37,643 - SwagLabsTest - INFO - Executing test: Valid checkout process with ID: CO001
+2024-07-12 01:50:37,643 - SwagLabsTest - INFO - Executing test: Valid checkout process with ID: CO001
+2024-07-12 01:50:37,643 - SwagLabsTest - INFO - Executing test: Valid checkout process with ID: CO001
+2024-07-12 01:50:37,643 - SwagLabsTest - INFO - Executing test: Valid checkout process with ID: CO001
+2024-07-12 01:50:37,643 - SwagLabsTest - INFO - Executing test: Valid checkout process with ID: CO001
+2024-07-12 01:50:37,643 - SwagLabsTest - INFO - Executing test: Valid checkout process with ID: CO001
+2024-07-12 01:50:37,643 - SwagLabsTest - INFO - Executing test: Valid checkout process with ID: CO001
+2024-07-12 01:50:38,396 - SwagLabsTest - INFO - Test CO001 passed
+2024-07-12 01:50:38,396 - SwagLabsTest - INFO - Test CO001 passed
+2024-07-12 01:50:38,396 - SwagLabsTest - INFO - Test CO001 passed
+2024-07-12 01:50:38,396 - SwagLabsTest - INFO - Test CO001 passed
+2024-07-12 01:50:38,396 - SwagLabsTest - INFO - Test CO001 passed
+2024-07-12 01:50:38,396 - SwagLabsTest - INFO - Test CO001 passed
+2024-07-12 01:50:38,396 - SwagLabsTest - INFO - Test CO001 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_checkout_page.py:15 Executing test: Valid checkout process with ID: CO001
+INFO     SwagLabsTest:test_checkout_page.py:39 Test CO001 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_checkout_page.py::TestCheckoutPage::test_checkout_cases[CO002]</td>
+          <td class="col-duration">2.31</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:50:40,096 - SwagLabsTest - INFO - Executing test: Checkout with missing first name with ID: CO002
+2024-07-12 01:50:40,096 - SwagLabsTest - INFO - Executing test: Checkout with missing first name with ID: CO002
+2024-07-12 01:50:40,096 - SwagLabsTest - INFO - Executing test: Checkout with missing first name with ID: CO002
+2024-07-12 01:50:40,096 - SwagLabsTest - INFO - Executing test: Checkout with missing first name with ID: CO002
+2024-07-12 01:50:40,096 - SwagLabsTest - INFO - Executing test: Checkout with missing first name with ID: CO002
+2024-07-12 01:50:40,096 - SwagLabsTest - INFO - Executing test: Checkout with missing first name with ID: CO002
+2024-07-12 01:50:40,096 - SwagLabsTest - INFO - Executing test: Checkout with missing first name with ID: CO002
+2024-07-12 01:50:40,707 - SwagLabsTest - INFO - Test CO002 passed
+2024-07-12 01:50:40,707 - SwagLabsTest - INFO - Test CO002 passed
+2024-07-12 01:50:40,707 - SwagLabsTest - INFO - Test CO002 passed
+2024-07-12 01:50:40,707 - SwagLabsTest - INFO - Test CO002 passed
+2024-07-12 01:50:40,707 - SwagLabsTest - INFO - Test CO002 passed
+2024-07-12 01:50:40,707 - SwagLabsTest - INFO - Test CO002 passed
+2024-07-12 01:50:40,707 - SwagLabsTest - INFO - Test CO002 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_checkout_page.py:15 Executing test: Checkout with missing first name with ID: CO002
+INFO     SwagLabsTest:test_checkout_page.py:39 Test CO002 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_checkout_page.py::TestCheckoutPage::test_checkout_cases[CO003]</td>
+          <td class="col-duration">2.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:50:42,488 - SwagLabsTest - INFO - Executing test: Checkout with missing last name with ID: CO003
+2024-07-12 01:50:42,488 - SwagLabsTest - INFO - Executing test: Checkout with missing last name with ID: CO003
+2024-07-12 01:50:42,488 - SwagLabsTest - INFO - Executing test: Checkout with missing last name with ID: CO003
+2024-07-12 01:50:42,488 - SwagLabsTest - INFO - Executing test: Checkout with missing last name with ID: CO003
+2024-07-12 01:50:42,488 - SwagLabsTest - INFO - Executing test: Checkout with missing last name with ID: CO003
+2024-07-12 01:50:42,488 - SwagLabsTest - INFO - Executing test: Checkout with missing last name with ID: CO003
+2024-07-12 01:50:42,488 - SwagLabsTest - INFO - Executing test: Checkout with missing last name with ID: CO003
+2024-07-12 01:50:43,273 - SwagLabsTest - INFO - Test CO003 passed
+2024-07-12 01:50:43,273 - SwagLabsTest - INFO - Test CO003 passed
+2024-07-12 01:50:43,273 - SwagLabsTest - INFO - Test CO003 passed
+2024-07-12 01:50:43,273 - SwagLabsTest - INFO - Test CO003 passed
+2024-07-12 01:50:43,273 - SwagLabsTest - INFO - Test CO003 passed
+2024-07-12 01:50:43,273 - SwagLabsTest - INFO - Test CO003 passed
+2024-07-12 01:50:43,273 - SwagLabsTest - INFO - Test CO003 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_checkout_page.py:15 Executing test: Checkout with missing last name with ID: CO003
+INFO     SwagLabsTest:test_checkout_page.py:39 Test CO003 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_checkout_page.py::TestCheckoutPage::test_checkout_cases[CO004]</td>
+          <td class="col-duration">2.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:50:44,947 - SwagLabsTest - INFO - Executing test: Checkout with missing postal code with ID: CO004
+2024-07-12 01:50:44,947 - SwagLabsTest - INFO - Executing test: Checkout with missing postal code with ID: CO004
+2024-07-12 01:50:44,947 - SwagLabsTest - INFO - Executing test: Checkout with missing postal code with ID: CO004
+2024-07-12 01:50:44,947 - SwagLabsTest - INFO - Executing test: Checkout with missing postal code with ID: CO004
+2024-07-12 01:50:44,947 - SwagLabsTest - INFO - Executing test: Checkout with missing postal code with ID: CO004
+2024-07-12 01:50:44,947 - SwagLabsTest - INFO - Executing test: Checkout with missing postal code with ID: CO004
+2024-07-12 01:50:44,947 - SwagLabsTest - INFO - Executing test: Checkout with missing postal code with ID: CO004
+2024-07-12 01:50:45,500 - SwagLabsTest - INFO - Test CO004 passed
+2024-07-12 01:50:45,500 - SwagLabsTest - INFO - Test CO004 passed
+2024-07-12 01:50:45,500 - SwagLabsTest - INFO - Test CO004 passed
+2024-07-12 01:50:45,500 - SwagLabsTest - INFO - Test CO004 passed
+2024-07-12 01:50:45,500 - SwagLabsTest - INFO - Test CO004 passed
+2024-07-12 01:50:45,500 - SwagLabsTest - INFO - Test CO004 passed
+2024-07-12 01:50:45,500 - SwagLabsTest - INFO - Test CO004 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_checkout_page.py:15 Executing test: Checkout with missing postal code with ID: CO004
+INFO     SwagLabsTest:test_checkout_page.py:39 Test CO004 passed<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_end_to_end.py::TestEndToEnd::test_end_to_end[E001]</td>
-          <td class="col-duration">7.99</td>
+          <td class="col-duration">7.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-10 16:33:52,891 - SwagLabsTest - INFO - Executing test: End-to-end purchase product test with ID: E001
-2024-07-10 16:33:52,891 - SwagLabsTest - INFO - Executing test: End-to-end purchase product test with ID: E001
-2024-07-10 16:33:54,073 - SwagLabsTest - INFO - Test E001 passed
-2024-07-10 16:33:54,073 - SwagLabsTest - INFO - Test E001 passed
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:50:54,321 - SwagLabsTest - INFO - Executing test: End-to-end purchase product test with ID: E001
+2024-07-12 01:50:54,321 - SwagLabsTest - INFO - Executing test: End-to-end purchase product test with ID: E001
+2024-07-12 01:50:54,321 - SwagLabsTest - INFO - Executing test: End-to-end purchase product test with ID: E001
+2024-07-12 01:50:54,321 - SwagLabsTest - INFO - Executing test: End-to-end purchase product test with ID: E001
+2024-07-12 01:50:54,321 - SwagLabsTest - INFO - Executing test: End-to-end purchase product test with ID: E001
+2024-07-12 01:50:54,321 - SwagLabsTest - INFO - Executing test: End-to-end purchase product test with ID: E001
+2024-07-12 01:50:54,321 - SwagLabsTest - INFO - Executing test: End-to-end purchase product test with ID: E001
+2024-07-12 01:50:55,352 - SwagLabsTest - INFO - Test E001 passed
+2024-07-12 01:50:55,352 - SwagLabsTest - INFO - Test E001 passed
+2024-07-12 01:50:55,352 - SwagLabsTest - INFO - Test E001 passed
+2024-07-12 01:50:55,352 - SwagLabsTest - INFO - Test E001 passed
+2024-07-12 01:50:55,352 - SwagLabsTest - INFO - Test E001 passed
+2024-07-12 01:50:55,352 - SwagLabsTest - INFO - Test E001 passed
+2024-07-12 01:50:55,352 - SwagLabsTest - INFO - Test E001 passed
 <br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_end_to_end.py:16 Executing test: End-to-end purchase product test with ID: E001
-INFO     SwagLabsTest:test_end_to_end.py:40 Test E001 passed<br/></div></td></tr></tbody></table></body></html>
+INFO     SwagLabsTest:test_end_to_end.py:40 Test E001 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_item_page.py::TestItemPage::test_view_product_details[I001]</td>
+          <td class="col-duration">6.63</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:01,622 - SwagLabsTest - INFO - Executing test: View product details with ID: I001
+2024-07-12 01:51:01,622 - SwagLabsTest - INFO - Executing test: View product details with ID: I001
+2024-07-12 01:51:01,622 - SwagLabsTest - INFO - Executing test: View product details with ID: I001
+2024-07-12 01:51:01,622 - SwagLabsTest - INFO - Executing test: View product details with ID: I001
+2024-07-12 01:51:01,622 - SwagLabsTest - INFO - Executing test: View product details with ID: I001
+2024-07-12 01:51:01,622 - SwagLabsTest - INFO - Executing test: View product details with ID: I001
+2024-07-12 01:51:01,622 - SwagLabsTest - INFO - Executing test: View product details with ID: I001
+2024-07-12 01:51:02,018 - SwagLabsTest - INFO - Test I001 passed
+2024-07-12 01:51:02,018 - SwagLabsTest - INFO - Test I001 passed
+2024-07-12 01:51:02,018 - SwagLabsTest - INFO - Test I001 passed
+2024-07-12 01:51:02,018 - SwagLabsTest - INFO - Test I001 passed
+2024-07-12 01:51:02,018 - SwagLabsTest - INFO - Test I001 passed
+2024-07-12 01:51:02,018 - SwagLabsTest - INFO - Test I001 passed
+2024-07-12 01:51:02,018 - SwagLabsTest - INFO - Test I001 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_item_page.py:15 Executing test: View product details with ID: I001
+INFO     SwagLabsTest:test_item_page.py:27 Test I001 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_item_page.py::TestItemPage::test_add_item_to_cart[I002]</td>
+          <td class="col-duration">1.31</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:03,108 - SwagLabsTest - INFO - Executing test: Add item to cart from item page with ID: I002
+2024-07-12 01:51:03,108 - SwagLabsTest - INFO - Executing test: Add item to cart from item page with ID: I002
+2024-07-12 01:51:03,108 - SwagLabsTest - INFO - Executing test: Add item to cart from item page with ID: I002
+2024-07-12 01:51:03,108 - SwagLabsTest - INFO - Executing test: Add item to cart from item page with ID: I002
+2024-07-12 01:51:03,108 - SwagLabsTest - INFO - Executing test: Add item to cart from item page with ID: I002
+2024-07-12 01:51:03,108 - SwagLabsTest - INFO - Executing test: Add item to cart from item page with ID: I002
+2024-07-12 01:51:03,108 - SwagLabsTest - INFO - Executing test: Add item to cart from item page with ID: I002
+2024-07-12 01:51:03,391 - SwagLabsTest - INFO - Test I002 passed
+2024-07-12 01:51:03,391 - SwagLabsTest - INFO - Test I002 passed
+2024-07-12 01:51:03,391 - SwagLabsTest - INFO - Test I002 passed
+2024-07-12 01:51:03,391 - SwagLabsTest - INFO - Test I002 passed
+2024-07-12 01:51:03,391 - SwagLabsTest - INFO - Test I002 passed
+2024-07-12 01:51:03,391 - SwagLabsTest - INFO - Test I002 passed
+2024-07-12 01:51:03,391 - SwagLabsTest - INFO - Test I002 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_item_page.py:30 Executing test: Add item to cart from item page with ID: I002
+INFO     SwagLabsTest:test_item_page.py:40 Test I002 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_item_page.py::TestItemPage::test_remove_item_from_cart[I003]</td>
+          <td class="col-duration">2.43</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:05,194 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:05,194 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:05,194 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:05,194 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:05,194 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:05,194 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:05,194 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:05,738 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:05,738 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:05,738 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:05,738 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:05,738 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:05,738 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:05,738 - SwagLabsTest - INFO - Test I003 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_item_page.py:43 Executing test: Remove item from cart from item page with ID: I003
+INFO     SwagLabsTest:test_item_page.py:58 Test I003 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_item_page.py::TestItemPage::test_remove_item_from_cart[SC002]</td>
+          <td class="col-duration">2.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:07,825 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:07,825 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:07,825 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:07,825 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:07,825 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:07,825 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:07,825 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:08,162 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:51:08,162 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:51:08,162 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:51:08,162 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:51:08,162 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:51:08,162 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:51:08,162 - SwagLabsTest - INFO - Test SC002 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_item_page.py:43 Executing test: Remove item from cart with ID: SC002
+INFO     SwagLabsTest:test_item_page.py:58 Test SC002 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_item_page.py::TestItemPage::test_back_to_products[I004]</td>
+          <td class="col-duration">1.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:09,130 - SwagLabsTest - INFO - Executing test: Navigate back to products from item page with ID: I004
+2024-07-12 01:51:09,130 - SwagLabsTest - INFO - Executing test: Navigate back to products from item page with ID: I004
+2024-07-12 01:51:09,130 - SwagLabsTest - INFO - Executing test: Navigate back to products from item page with ID: I004
+2024-07-12 01:51:09,130 - SwagLabsTest - INFO - Executing test: Navigate back to products from item page with ID: I004
+2024-07-12 01:51:09,130 - SwagLabsTest - INFO - Executing test: Navigate back to products from item page with ID: I004
+2024-07-12 01:51:09,130 - SwagLabsTest - INFO - Executing test: Navigate back to products from item page with ID: I004
+2024-07-12 01:51:09,130 - SwagLabsTest - INFO - Executing test: Navigate back to products from item page with ID: I004
+2024-07-12 01:51:09,345 - SwagLabsTest - INFO - Test I004 passed
+2024-07-12 01:51:09,345 - SwagLabsTest - INFO - Test I004 passed
+2024-07-12 01:51:09,345 - SwagLabsTest - INFO - Test I004 passed
+2024-07-12 01:51:09,345 - SwagLabsTest - INFO - Test I004 passed
+2024-07-12 01:51:09,345 - SwagLabsTest - INFO - Test I004 passed
+2024-07-12 01:51:09,345 - SwagLabsTest - INFO - Test I004 passed
+2024-07-12 01:51:09,345 - SwagLabsTest - INFO - Test I004 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_item_page.py:61 Executing test: Navigate back to products from item page with ID: I004
+INFO     SwagLabsTest:test_item_page.py:70 Test I004 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_login.py::TestLogin::test_login[T001]</td>
+          <td class="col-duration">5.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:15,440 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-12 01:51:15,440 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-12 01:51:15,440 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-12 01:51:15,440 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-12 01:51:15,440 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-12 01:51:15,440 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-12 01:51:15,440 - SwagLabsTest - INFO - Executing test: Valid login test with ID: T001
+2024-07-12 01:51:15,854 - SwagLabsTest - INFO - Test T001 passed
+2024-07-12 01:51:15,854 - SwagLabsTest - INFO - Test T001 passed
+2024-07-12 01:51:15,854 - SwagLabsTest - INFO - Test T001 passed
+2024-07-12 01:51:15,854 - SwagLabsTest - INFO - Test T001 passed
+2024-07-12 01:51:15,854 - SwagLabsTest - INFO - Test T001 passed
+2024-07-12 01:51:15,854 - SwagLabsTest - INFO - Test T001 passed
+2024-07-12 01:51:15,854 - SwagLabsTest - INFO - Test T001 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_login.py:16 Executing test: Valid login test with ID: T001
+INFO     SwagLabsTest:test_login.py:34 Test T001 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_login.py::TestLogin::test_login[T002]</td>
+          <td class="col-duration">0.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:15,858 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-12 01:51:15,858 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-12 01:51:15,858 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-12 01:51:15,858 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-12 01:51:15,858 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-12 01:51:15,858 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-12 01:51:15,858 - SwagLabsTest - INFO - Executing test: Invalid login test with ID: T002
+2024-07-12 01:51:16,329 - SwagLabsTest - INFO - Test T002 passed
+2024-07-12 01:51:16,329 - SwagLabsTest - INFO - Test T002 passed
+2024-07-12 01:51:16,329 - SwagLabsTest - INFO - Test T002 passed
+2024-07-12 01:51:16,329 - SwagLabsTest - INFO - Test T002 passed
+2024-07-12 01:51:16,329 - SwagLabsTest - INFO - Test T002 passed
+2024-07-12 01:51:16,329 - SwagLabsTest - INFO - Test T002 passed
+2024-07-12 01:51:16,329 - SwagLabsTest - INFO - Test T002 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_login.py:16 Executing test: Invalid login test with ID: T002
+INFO     SwagLabsTest:test_login.py:34 Test T002 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_login.py::TestLogin::test_login[T003]</td>
+          <td class="col-duration">0.39</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:16,341 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-12 01:51:16,341 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-12 01:51:16,341 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-12 01:51:16,341 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-12 01:51:16,341 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-12 01:51:16,341 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-12 01:51:16,341 - SwagLabsTest - INFO - Executing test: Locked out user login test with ID: T003
+2024-07-12 01:51:16,731 - SwagLabsTest - INFO - Test T003 passed
+2024-07-12 01:51:16,731 - SwagLabsTest - INFO - Test T003 passed
+2024-07-12 01:51:16,731 - SwagLabsTest - INFO - Test T003 passed
+2024-07-12 01:51:16,731 - SwagLabsTest - INFO - Test T003 passed
+2024-07-12 01:51:16,731 - SwagLabsTest - INFO - Test T003 passed
+2024-07-12 01:51:16,731 - SwagLabsTest - INFO - Test T003 passed
+2024-07-12 01:51:16,731 - SwagLabsTest - INFO - Test T003 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_login.py:16 Executing test: Locked out user login test with ID: T003
+INFO     SwagLabsTest:test_login.py:34 Test T003 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_login.py::TestLogin::test_login[T004]</td>
+          <td class="col-duration">0.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:16,735 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-12 01:51:16,735 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-12 01:51:16,735 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-12 01:51:16,735 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-12 01:51:16,735 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-12 01:51:16,735 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-12 01:51:16,735 - SwagLabsTest - INFO - Executing test: SQL injection test with ID: T004
+2024-07-12 01:51:17,101 - SwagLabsTest - INFO - Test T004 passed
+2024-07-12 01:51:17,101 - SwagLabsTest - INFO - Test T004 passed
+2024-07-12 01:51:17,101 - SwagLabsTest - INFO - Test T004 passed
+2024-07-12 01:51:17,101 - SwagLabsTest - INFO - Test T004 passed
+2024-07-12 01:51:17,101 - SwagLabsTest - INFO - Test T004 passed
+2024-07-12 01:51:17,101 - SwagLabsTest - INFO - Test T004 passed
+2024-07-12 01:51:17,101 - SwagLabsTest - INFO - Test T004 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_login.py:16 Executing test: SQL injection test with ID: T004
+INFO     SwagLabsTest:test_login.py:34 Test T004 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_login.py::TestLogin::test_login[T005]</td>
+          <td class="col-duration">0.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:17,106 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-12 01:51:17,106 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-12 01:51:17,106 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-12 01:51:17,106 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-12 01:51:17,106 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-12 01:51:17,106 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-12 01:51:17,106 - SwagLabsTest - INFO - Executing test: Page load time test with ID: T005
+2024-07-12 01:51:17,465 - SwagLabsTest - INFO - Test T005 passed
+2024-07-12 01:51:17,465 - SwagLabsTest - INFO - Test T005 passed
+2024-07-12 01:51:17,465 - SwagLabsTest - INFO - Test T005 passed
+2024-07-12 01:51:17,465 - SwagLabsTest - INFO - Test T005 passed
+2024-07-12 01:51:17,465 - SwagLabsTest - INFO - Test T005 passed
+2024-07-12 01:51:17,465 - SwagLabsTest - INFO - Test T005 passed
+2024-07-12 01:51:17,465 - SwagLabsTest - INFO - Test T005 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_login.py:16 Executing test: Page load time test with ID: T005
+INFO     SwagLabsTest:test_login.py:34 Test T005 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_login.py::TestLogin::test_ui_elements_login[T006]</td>
+          <td class="col-duration">0.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:17,468 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-12 01:51:17,468 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-12 01:51:17,468 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-12 01:51:17,468 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-12 01:51:17,468 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-12 01:51:17,468 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-12 01:51:17,468 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: T006
+2024-07-12 01:51:17,653 - SwagLabsTest - INFO - Test T006 passed
+2024-07-12 01:51:17,653 - SwagLabsTest - INFO - Test T006 passed
+2024-07-12 01:51:17,653 - SwagLabsTest - INFO - Test T006 passed
+2024-07-12 01:51:17,653 - SwagLabsTest - INFO - Test T006 passed
+2024-07-12 01:51:17,653 - SwagLabsTest - INFO - Test T006 passed
+2024-07-12 01:51:17,653 - SwagLabsTest - INFO - Test T006 passed
+2024-07-12 01:51:17,653 - SwagLabsTest - INFO - Test T006 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_login.py:37 Executing test: UI element visibility test with ID: T006
+INFO     SwagLabsTest:test_login.py:47 Test T006 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_product_page.py::TestProductPage::test_product_page[P001]</td>
+          <td class="col-duration">6.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:23,129 - SwagLabsTest - INFO - Executing test: Product page visibility test with ID: P001
+2024-07-12 01:51:23,129 - SwagLabsTest - INFO - Executing test: Product page visibility test with ID: P001
+2024-07-12 01:51:23,129 - SwagLabsTest - INFO - Executing test: Product page visibility test with ID: P001
+2024-07-12 01:51:23,129 - SwagLabsTest - INFO - Executing test: Product page visibility test with ID: P001
+2024-07-12 01:51:23,129 - SwagLabsTest - INFO - Executing test: Product page visibility test with ID: P001
+2024-07-12 01:51:23,129 - SwagLabsTest - INFO - Executing test: Product page visibility test with ID: P001
+2024-07-12 01:51:23,129 - SwagLabsTest - INFO - Executing test: Product page visibility test with ID: P001
+2024-07-12 01:51:23,265 - SwagLabsTest - INFO - Test P001 passed
+2024-07-12 01:51:23,265 - SwagLabsTest - INFO - Test P001 passed
+2024-07-12 01:51:23,265 - SwagLabsTest - INFO - Test P001 passed
+2024-07-12 01:51:23,265 - SwagLabsTest - INFO - Test P001 passed
+2024-07-12 01:51:23,265 - SwagLabsTest - INFO - Test P001 passed
+2024-07-12 01:51:23,265 - SwagLabsTest - INFO - Test P001 passed
+2024-07-12 01:51:23,265 - SwagLabsTest - INFO - Test P001 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_product_page.py:18 Executing test: Product page visibility test with ID: P001
+INFO     SwagLabsTest:test_product_page.py:34 Test P001 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_product_page.py::TestProductPage::test_product_page[P002]</td>
+          <td class="col-duration">1.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:24,267 - SwagLabsTest - INFO - Executing test: Incorrect product detail test with problem_user with ID: P002
+2024-07-12 01:51:24,267 - SwagLabsTest - INFO - Executing test: Incorrect product detail test with problem_user with ID: P002
+2024-07-12 01:51:24,267 - SwagLabsTest - INFO - Executing test: Incorrect product detail test with problem_user with ID: P002
+2024-07-12 01:51:24,267 - SwagLabsTest - INFO - Executing test: Incorrect product detail test with problem_user with ID: P002
+2024-07-12 01:51:24,267 - SwagLabsTest - INFO - Executing test: Incorrect product detail test with problem_user with ID: P002
+2024-07-12 01:51:24,267 - SwagLabsTest - INFO - Executing test: Incorrect product detail test with problem_user with ID: P002
+2024-07-12 01:51:24,267 - SwagLabsTest - INFO - Executing test: Incorrect product detail test with problem_user with ID: P002
+2024-07-12 01:51:24,392 - SwagLabsTest - INFO - Test P002 passed
+2024-07-12 01:51:24,392 - SwagLabsTest - INFO - Test P002 passed
+2024-07-12 01:51:24,392 - SwagLabsTest - INFO - Test P002 passed
+2024-07-12 01:51:24,392 - SwagLabsTest - INFO - Test P002 passed
+2024-07-12 01:51:24,392 - SwagLabsTest - INFO - Test P002 passed
+2024-07-12 01:51:24,392 - SwagLabsTest - INFO - Test P002 passed
+2024-07-12 01:51:24,392 - SwagLabsTest - INFO - Test P002 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_product_page.py:18 Executing test: Incorrect product detail test with problem_user with ID: P002
+INFO     SwagLabsTest:test_product_page.py:34 Test P002 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_product_page.py::TestProductPage::test_product_page[P003]</td>
+          <td class="col-duration">1.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:25,316 - SwagLabsTest - INFO - Executing test: Product page load time test with ID: P003
+2024-07-12 01:51:25,316 - SwagLabsTest - INFO - Executing test: Product page load time test with ID: P003
+2024-07-12 01:51:25,316 - SwagLabsTest - INFO - Executing test: Product page load time test with ID: P003
+2024-07-12 01:51:25,316 - SwagLabsTest - INFO - Executing test: Product page load time test with ID: P003
+2024-07-12 01:51:25,316 - SwagLabsTest - INFO - Executing test: Product page load time test with ID: P003
+2024-07-12 01:51:25,316 - SwagLabsTest - INFO - Executing test: Product page load time test with ID: P003
+2024-07-12 01:51:25,316 - SwagLabsTest - INFO - Executing test: Product page load time test with ID: P003
+2024-07-12 01:51:25,431 - SwagLabsTest - INFO - Test P003 passed
+2024-07-12 01:51:25,431 - SwagLabsTest - INFO - Test P003 passed
+2024-07-12 01:51:25,431 - SwagLabsTest - INFO - Test P003 passed
+2024-07-12 01:51:25,431 - SwagLabsTest - INFO - Test P003 passed
+2024-07-12 01:51:25,431 - SwagLabsTest - INFO - Test P003 passed
+2024-07-12 01:51:25,431 - SwagLabsTest - INFO - Test P003 passed
+2024-07-12 01:51:25,431 - SwagLabsTest - INFO - Test P003 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_product_page.py:18 Executing test: Product page load time test with ID: P003
+INFO     SwagLabsTest:test_product_page.py:34 Test P003 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_product_page.py::TestProductPage::test_ui_elements_product[P004]</td>
+          <td class="col-duration">1.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:26,444 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: P004
+2024-07-12 01:51:26,444 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: P004
+2024-07-12 01:51:26,444 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: P004
+2024-07-12 01:51:26,444 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: P004
+2024-07-12 01:51:26,444 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: P004
+2024-07-12 01:51:26,444 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: P004
+2024-07-12 01:51:26,444 - SwagLabsTest - INFO - Executing test: UI element visibility test with ID: P004
+2024-07-12 01:51:26,611 - SwagLabsTest - INFO - Test P004 passed
+2024-07-12 01:51:26,611 - SwagLabsTest - INFO - Test P004 passed
+2024-07-12 01:51:26,611 - SwagLabsTest - INFO - Test P004 passed
+2024-07-12 01:51:26,611 - SwagLabsTest - INFO - Test P004 passed
+2024-07-12 01:51:26,611 - SwagLabsTest - INFO - Test P004 passed
+2024-07-12 01:51:26,611 - SwagLabsTest - INFO - Test P004 passed
+2024-07-12 01:51:26,611 - SwagLabsTest - INFO - Test P004 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_product_page.py:37 Executing test: UI element visibility test with ID: P004
+INFO     SwagLabsTest:test_product_page.py:46 Test P004 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_product_page.py::TestProductPage::test_add_to_cart[P005]</td>
+          <td class="col-duration">1.35</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:27,748 - SwagLabsTest - INFO - Executing test: Add product to cart test with ID: P005
+2024-07-12 01:51:27,748 - SwagLabsTest - INFO - Executing test: Add product to cart test with ID: P005
+2024-07-12 01:51:27,748 - SwagLabsTest - INFO - Executing test: Add product to cart test with ID: P005
+2024-07-12 01:51:27,748 - SwagLabsTest - INFO - Executing test: Add product to cart test with ID: P005
+2024-07-12 01:51:27,748 - SwagLabsTest - INFO - Executing test: Add product to cart test with ID: P005
+2024-07-12 01:51:27,748 - SwagLabsTest - INFO - Executing test: Add product to cart test with ID: P005
+2024-07-12 01:51:27,748 - SwagLabsTest - INFO - Executing test: Add product to cart test with ID: P005
+2024-07-12 01:51:27,979 - SwagLabsTest - INFO - Test P005 passed
+2024-07-12 01:51:27,979 - SwagLabsTest - INFO - Test P005 passed
+2024-07-12 01:51:27,979 - SwagLabsTest - INFO - Test P005 passed
+2024-07-12 01:51:27,979 - SwagLabsTest - INFO - Test P005 passed
+2024-07-12 01:51:27,979 - SwagLabsTest - INFO - Test P005 passed
+2024-07-12 01:51:27,979 - SwagLabsTest - INFO - Test P005 passed
+2024-07-12 01:51:27,979 - SwagLabsTest - INFO - Test P005 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_product_page.py:50 Executing test: Add product to cart test with ID: P005
+INFO     SwagLabsTest:test_product_page.py:61 Test P005 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_product_page.py::TestProductPage::test_inventory_list_validation[P007]</td>
+          <td class="col-duration">1.98</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:28,899 - SwagLabsTest - INFO - Executing test: Inventory list validation test with ID: P007
+2024-07-12 01:51:28,899 - SwagLabsTest - INFO - Executing test: Inventory list validation test with ID: P007
+2024-07-12 01:51:28,899 - SwagLabsTest - INFO - Executing test: Inventory list validation test with ID: P007
+2024-07-12 01:51:28,899 - SwagLabsTest - INFO - Executing test: Inventory list validation test with ID: P007
+2024-07-12 01:51:28,899 - SwagLabsTest - INFO - Executing test: Inventory list validation test with ID: P007
+2024-07-12 01:51:28,899 - SwagLabsTest - INFO - Executing test: Inventory list validation test with ID: P007
+2024-07-12 01:51:28,899 - SwagLabsTest - INFO - Executing test: Inventory list validation test with ID: P007
+2024-07-12 01:51:29,894 - SwagLabsTest - INFO - Test P007 passed
+2024-07-12 01:51:29,894 - SwagLabsTest - INFO - Test P007 passed
+2024-07-12 01:51:29,894 - SwagLabsTest - INFO - Test P007 passed
+2024-07-12 01:51:29,894 - SwagLabsTest - INFO - Test P007 passed
+2024-07-12 01:51:29,894 - SwagLabsTest - INFO - Test P007 passed
+2024-07-12 01:51:29,894 - SwagLabsTest - INFO - Test P007 passed
+2024-07-12 01:51:29,894 - SwagLabsTest - INFO - Test P007 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_product_page.py:79 Executing test: Inventory list validation test with ID: P007
+INFO     SwagLabsTest:test_product_page.py:106 Test P007 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_shopping_cart.py::TestShoppingCart::test_verify_product_details[SC001]</td>
+          <td class="col-duration">6.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:36,103 - SwagLabsTest - INFO - Executing test: Verify product details in the cart with ID: SC001
+2024-07-12 01:51:36,103 - SwagLabsTest - INFO - Executing test: Verify product details in the cart with ID: SC001
+2024-07-12 01:51:36,103 - SwagLabsTest - INFO - Executing test: Verify product details in the cart with ID: SC001
+2024-07-12 01:51:36,103 - SwagLabsTest - INFO - Executing test: Verify product details in the cart with ID: SC001
+2024-07-12 01:51:36,103 - SwagLabsTest - INFO - Executing test: Verify product details in the cart with ID: SC001
+2024-07-12 01:51:36,103 - SwagLabsTest - INFO - Executing test: Verify product details in the cart with ID: SC001
+2024-07-12 01:51:36,103 - SwagLabsTest - INFO - Executing test: Verify product details in the cart with ID: SC001
+2024-07-12 01:51:36,811 - SwagLabsTest - INFO - Test SC001 passed
+2024-07-12 01:51:36,811 - SwagLabsTest - INFO - Test SC001 passed
+2024-07-12 01:51:36,811 - SwagLabsTest - INFO - Test SC001 passed
+2024-07-12 01:51:36,811 - SwagLabsTest - INFO - Test SC001 passed
+2024-07-12 01:51:36,811 - SwagLabsTest - INFO - Test SC001 passed
+2024-07-12 01:51:36,811 - SwagLabsTest - INFO - Test SC001 passed
+2024-07-12 01:51:36,811 - SwagLabsTest - INFO - Test SC001 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_shopping_cart.py:15 Executing test: Verify product details in the cart with ID: SC001
+INFO     SwagLabsTest:test_shopping_cart.py:27 Test SC001 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_shopping_cart.py::TestShoppingCart::test_remove_item_from_cart[I003]</td>
+          <td class="col-duration">12.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:38,696 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:38,696 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:38,696 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:38,696 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:38,696 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:38,696 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:38,696 - SwagLabsTest - INFO - Executing test: Remove item from cart from item page with ID: I003
+2024-07-12 01:51:49,324 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:49,324 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:49,324 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:49,324 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:49,324 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:49,324 - SwagLabsTest - INFO - Test I003 passed
+2024-07-12 01:51:49,324 - SwagLabsTest - INFO - Test I003 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_shopping_cart.py:30 Executing test: Remove item from cart from item page with ID: I003
+INFO     SwagLabsTest:test_shopping_cart.py:44 Test I003 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_shopping_cart.py::TestShoppingCart::test_remove_item_from_cart[SC002]</td>
+          <td class="col-duration">12.37</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:51:51,266 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:51,266 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:51,266 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:51,266 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:51,266 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:51,266 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:51:51,266 - SwagLabsTest - INFO - Executing test: Remove item from cart with ID: SC002
+2024-07-12 01:52:01,851 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:52:01,851 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:52:01,851 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:52:01,851 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:52:01,851 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:52:01,851 - SwagLabsTest - INFO - Test SC002 passed
+2024-07-12 01:52:01,851 - SwagLabsTest - INFO - Test SC002 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_shopping_cart.py:30 Executing test: Remove item from cart with ID: SC002
+INFO     SwagLabsTest:test_shopping_cart.py:44 Test SC002 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_shopping_cart.py::TestShoppingCart::test_add_multiple_items[SC003]</td>
+          <td class="col-duration">1.86</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:52:02,851 - SwagLabsTest - INFO - Executing test: Add multiple items and verify with ID: SC003
+2024-07-12 01:52:02,851 - SwagLabsTest - INFO - Executing test: Add multiple items and verify with ID: SC003
+2024-07-12 01:52:02,851 - SwagLabsTest - INFO - Executing test: Add multiple items and verify with ID: SC003
+2024-07-12 01:52:02,851 - SwagLabsTest - INFO - Executing test: Add multiple items and verify with ID: SC003
+2024-07-12 01:52:02,851 - SwagLabsTest - INFO - Executing test: Add multiple items and verify with ID: SC003
+2024-07-12 01:52:02,851 - SwagLabsTest - INFO - Executing test: Add multiple items and verify with ID: SC003
+2024-07-12 01:52:02,851 - SwagLabsTest - INFO - Executing test: Add multiple items and verify with ID: SC003
+2024-07-12 01:52:03,701 - SwagLabsTest - INFO - Test SC003 passed
+2024-07-12 01:52:03,701 - SwagLabsTest - INFO - Test SC003 passed
+2024-07-12 01:52:03,701 - SwagLabsTest - INFO - Test SC003 passed
+2024-07-12 01:52:03,701 - SwagLabsTest - INFO - Test SC003 passed
+2024-07-12 01:52:03,701 - SwagLabsTest - INFO - Test SC003 passed
+2024-07-12 01:52:03,701 - SwagLabsTest - INFO - Test SC003 passed
+2024-07-12 01:52:03,701 - SwagLabsTest - INFO - Test SC003 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_shopping_cart.py:47 Executing test: Add multiple items and verify with ID: SC003
+INFO     SwagLabsTest:test_shopping_cart.py:62 Test SC003 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_shopping_cart.py::TestShoppingCart::test_navigate_to_checkout[SC004]</td>
+          <td class="col-duration">1.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:52:04,699 - SwagLabsTest - INFO - Executing test: Navigate to checkout page with ID: SC004
+2024-07-12 01:52:04,699 - SwagLabsTest - INFO - Executing test: Navigate to checkout page with ID: SC004
+2024-07-12 01:52:04,699 - SwagLabsTest - INFO - Executing test: Navigate to checkout page with ID: SC004
+2024-07-12 01:52:04,699 - SwagLabsTest - INFO - Executing test: Navigate to checkout page with ID: SC004
+2024-07-12 01:52:04,699 - SwagLabsTest - INFO - Executing test: Navigate to checkout page with ID: SC004
+2024-07-12 01:52:04,699 - SwagLabsTest - INFO - Executing test: Navigate to checkout page with ID: SC004
+2024-07-12 01:52:04,699 - SwagLabsTest - INFO - Executing test: Navigate to checkout page with ID: SC004
+2024-07-12 01:52:05,131 - SwagLabsTest - INFO - Test SC004 passed
+2024-07-12 01:52:05,131 - SwagLabsTest - INFO - Test SC004 passed
+2024-07-12 01:52:05,131 - SwagLabsTest - INFO - Test SC004 passed
+2024-07-12 01:52:05,131 - SwagLabsTest - INFO - Test SC004 passed
+2024-07-12 01:52:05,131 - SwagLabsTest - INFO - Test SC004 passed
+2024-07-12 01:52:05,131 - SwagLabsTest - INFO - Test SC004 passed
+2024-07-12 01:52:05,131 - SwagLabsTest - INFO - Test SC004 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_shopping_cart.py:65 Executing test: Navigate to checkout page with ID: SC004
+INFO     SwagLabsTest:test_shopping_cart.py:75 Test SC004 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_shopping_cart.py::TestShoppingCart::test_different_user_carts[SC006]</td>
+          <td class="col-duration">13.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2024-07-12 01:52:18,333 - SwagLabsTest - INFO - Executing test: Verify that two different users do not have their carts overridden with ID: SC006
+2024-07-12 01:52:18,333 - SwagLabsTest - INFO - Executing test: Verify that two different users do not have their carts overridden with ID: SC006
+2024-07-12 01:52:18,333 - SwagLabsTest - INFO - Executing test: Verify that two different users do not have their carts overridden with ID: SC006
+2024-07-12 01:52:18,333 - SwagLabsTest - INFO - Executing test: Verify that two different users do not have their carts overridden with ID: SC006
+2024-07-12 01:52:18,333 - SwagLabsTest - INFO - Executing test: Verify that two different users do not have their carts overridden with ID: SC006
+2024-07-12 01:52:18,333 - SwagLabsTest - INFO - Executing test: Verify that two different users do not have their carts overridden with ID: SC006
+2024-07-12 01:52:18,333 - SwagLabsTest - INFO - Executing test: Verify that two different users do not have their carts overridden with ID: SC006
+2024-07-12 01:52:29,889 - SwagLabsTest - INFO - Test SC006 passed
+2024-07-12 01:52:29,889 - SwagLabsTest - INFO - Test SC006 passed
+2024-07-12 01:52:29,889 - SwagLabsTest - INFO - Test SC006 passed
+2024-07-12 01:52:29,889 - SwagLabsTest - INFO - Test SC006 passed
+2024-07-12 01:52:29,889 - SwagLabsTest - INFO - Test SC006 passed
+2024-07-12 01:52:29,889 - SwagLabsTest - INFO - Test SC006 passed
+2024-07-12 01:52:29,889 - SwagLabsTest - INFO - Test SC006 passed
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     SwagLabsTest:test_shopping_cart.py:90 Executing test: Verify that two different users do not have their carts overridden with ID: SC006
+INFO     SwagLabsTest:test_shopping_cart.py:114 Test SC006 passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_simple.py::test_simple</td>
+          <td class="col-duration">5.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

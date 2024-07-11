@@ -1,0 +1,91 @@
+{
+    "tests": [
+        {
+            "id": "SC001",
+            "description": "Verify product details in the cart",
+            "category": "verify_product_details",
+            "tags": ["smoke", "sanity", "positive"],
+            "product_name": "Sauce Labs Backpack",
+            "expected_result": {
+                "name": "Sauce Labs Backpack",
+                "price": "$29.99",
+                "quantity": "1",
+                "description": "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."
+            },
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "SC002",
+            "description": "Remove item from cart",
+            "category": "remove_item_from_cart",
+            "tags": ["functional"],
+            "product_name": "Sauce Labs Backpack",
+            "expected_result": "button[data-test='add-to-cart-sauce-labs-backpack']",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "SC003",
+            "description": "Add multiple items and verify",
+            "category": "add_multiple_items",
+            "tags": ["functional", "sanity"],
+            "products": [
+                {
+                    "name": "Sauce Labs Backpack",
+                    "price": "$29.99"
+                },
+                {
+                    "name": "Sauce Labs Bike Light",
+                    "price": "$9.99"
+                }
+            ],
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "SC004",
+            "description": "Navigate to checkout page",
+            "category": "navigate_to_checkout",
+            "tags": ["functional", "navigation"],
+            "products": [
+                {
+                    "name": "Sauce Labs Backpack",
+                    "price": "$29.99"
+                }
+            ],
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "SC005",
+            "description": "Attempt to checkout with an empty cart",
+            "category": "empty_cart_checkout",
+            "tags": ["functional", "negative"],
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "SC006",
+            "description": "Verify that two different users do not have their carts overridden",
+            "category": "different_user_carts",
+            "tags": ["functional", "sanity"],
+            "products_user1": [
+                {
+                    "name": "Sauce Labs Backpack",
+                    "price": "$29.99"
+                }
+            ],
+            "products_user2": [
+                {
+                    "name": "Sauce Labs Bike Light",
+                    "price": "$9.99"
+                }
+            ],
+            "username_user1": "standard_user",
+            "password_user1": "secret_sauce",
+            "username_user2": "performance_glitch_user",
+            "password_user2": "secret_sauce"
+        }
+    ]
+}

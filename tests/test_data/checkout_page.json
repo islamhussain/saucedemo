@@ -1,0 +1,76 @@
+{
+    "tests": [
+        {
+            "id": "CO001",
+            "description": "Valid checkout process",
+            "category": "checkout_cases",
+            "tags": ["functional", "sanity"],
+            "username": "standard_user",
+            "password": "secret_sauce",
+            "first_name": "John",
+            "last_name": "Doe",
+            "postal_code": "12345",
+            "expected_result": "checkout-step-two.html"
+        },
+        {
+            "id": "CO002",
+            "description": "Checkout with missing first name",
+            "category": "checkout_cases",
+            "tags": ["functional", "negative"],
+            "username": "standard_user",
+            "password": "secret_sauce",
+            "first_name": "",
+            "last_name": "Doe",
+            "postal_code": "12345",
+            "expected_result": "Error: First Name is required"
+        },
+        {
+            "id": "CO003",
+            "description": "Checkout with missing last name",
+            "category": "checkout_cases",
+            "tags": ["functional", "negative"],
+            "username": "standard_user",
+            "password": "secret_sauce",
+            "first_name": "John",
+            "last_name": "",
+            "postal_code": "12345",
+            "expected_result": "Error: Last Name is required"
+        },
+        {
+            "id": "CO004",
+            "description": "Checkout with missing postal code",
+            "category": "checkout_cases",
+            "tags": ["functional", "negative"],
+            "username": "standard_user",
+            "password": "secret_sauce",
+            "first_name": "John",
+            "last_name": "Doe",
+            "postal_code": "",
+            "expected_result": "Error: Postal Code is required"
+        },
+        {
+            "id": "CO005",
+            "description": "Fuzzy data in postal code",
+            "category": "checkout_cases",
+            "tags": ["functional", "negative"],
+            "username": "standard_user",
+            "password": "secret_sauce",
+            "first_name": "1234",
+            "last_name": "!@#$",
+            "postal_code": "abcde",
+            "expected_error": "Error: Postal Code must be numeric",
+            "xfail": true
+        },
+        {
+            "id": "C0006",
+            "description": "Test cancel checkout",
+            "category": "cancel_checkout",
+            "username": "standard_user",
+            "password": "secret_sauce",
+            "first_name": "John",
+            "last_name": "Doe",
+            "postal_code": "1234",
+            "tags": ["negative"]
+        }
+    ]
+}

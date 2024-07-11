@@ -33,7 +33,7 @@ class TestLogin:
             assert is_displayed(driver, (By.CSS_SELECTOR, test_case['expected_result']))
         logger.info(f"Test {test_case['id']} passed")
 
-    def test_ui_elements(self, driver, test_case):
+    def test_ui_elements_login(self, driver, test_case):
         logger.info(f"Executing test: {test_case['description']} with ID: {test_case['id']}")
         driver.get("https://www.saucedemo.com/")
 

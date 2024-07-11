@@ -32,7 +32,7 @@
         {
             "id": "P004",
             "description": "UI element visibility test",
-            "category": "ui_elements",
+            "category": "ui_elements_product",
             "tags": ["visual", "ui"],
             "expected_result": {
                 "elements": [

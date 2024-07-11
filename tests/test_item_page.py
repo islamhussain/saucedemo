@@ -39,7 +39,7 @@ class TestItemPage:
         assert is_displayed(driver, XPaths.CART_BADGE)
         logger.info(f"Test {test_case['id']} passed")
 
-    def test_remove_item_from_cart(self, driver, test_case):
+    def test_remove_item_from_cart(self, driver, test_case, reset_app_state):
         logger.info(f"Executing test: {test_case['description']} with ID: {test_case['id']}")
         driver.get("https://www.saucedemo.com/inventory.html")
 

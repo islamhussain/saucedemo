@@ -33,10 +33,9 @@ class TestProductPage:
         assert is_displayed(driver, XPaths.INVENTORY_LIST)
         logger.info(f"Test {test_case['id']} passed")
 
-    def test_ui_elements(self, driver, test_case):
+    def test_ui_elements_product(self, driver, test_case):
         logger.info(f"Executing test: {test_case['description']} with ID: {test_case['id']}")
         driver.get("https://www.saucedemo.com/inventory.html")
-
         for element in test_case['expected_result']['elements']:
             try:
                 perform_action(driver, "wait_for_visibility", (By.ID, element['id']), timeout=20)
@@ -99,7 +98,7 @@ class TestProductPage:
                 price_element = driver.find_element(By.XPATH, price_xpath)
                 assert price_element.text == product_price, f"Expected price {product_price}, but got {price_element.text}"
 
-                image_xpath = generate_xpath(XPaths.PRODUCT_IMAGE, product_name=product_name, product_image=product_image)
+                image_xpath = generate_xpath(XPaths.DIV_TEXT_EQUALS, product_name=product_name, product_image=product_image)
                 assert is_displayed(driver, (By.XPATH, image_xpath))
         except NoSuchElementException:
             logger.error(driver.page_source)  # Log page source for debugging
