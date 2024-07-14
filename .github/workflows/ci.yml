@@ -57,3 +57,10 @@ jobs:
           saucedemo-tests:latest \
           pytest --browser=$BROWSER --tags=$TAGS -n $WORKERS --test-data=$TEST_DATA
 
+    - name: Upload test report
+      if: success()
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-report
+        path: report/report.html
+
