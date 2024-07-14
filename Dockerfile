@@ -22,5 +22,3 @@ COPY . /app
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 
-# Default command (can be overridden by specific commands in the workflow)
-CMD ["pytest"]
