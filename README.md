@@ -15,8 +15,8 @@ This framework is designed for automated testing of the Swag Labs application us
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-repo/swag-labs-automation.git
-   cd swag-labs-automation
+   https://github.com/islamhussain/saucedemo.git
+   cd saucedemo
    ```
 
 2. **Create a virtual environment:**
