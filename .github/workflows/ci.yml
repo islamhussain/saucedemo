@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tags to run specific tests'
+        required: false
+      workers:
+        description: 'Number of parallel test workers'
+        required: false
+        default: 'auto'
+      test_data:
+        description: 'Path to test data file or directory'
+        required: false
+      browser:
+        description: 'Browser to use for testing'
+        required: false
+        default: 'chrome'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Cache Docker layers
+      uses: actions/cache@v2
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-buildx-
+
+    - name: Build Docker image
+      run: |
+        docker build -t saucedemo-tests:latest .
+
+    - name: Run tests
+      run: |
+        docker run --rm \
+          -e BROWSER="${{ github.event.inputs.browser || 'chrome' }}" \
+          -e TAGS="${{ github.event.inputs.tags || 'all' }}" \
+          -e WORKERS="${{ github.event.inputs.workers || 'auto' }}" \
+          -e TEST_DATA="${{ github.event.inputs.test_data || 'test_data/test_data.json' }}" \
+          saucedemo-tests:latest \
+          pytest --browser=$BROWSER --tags=$TAGS -n $WORKERS --test-data=$TEST_DATA
+
