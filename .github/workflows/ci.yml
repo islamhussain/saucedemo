@@ -55,7 +55,7 @@ jobs:
           -e WORKERS="${{ github.event.inputs.workers || 'auto' }}" \
           -e TEST_DATA="${{ github.event.inputs.test_data || 'test_data/test_data.json' }}" \
           saucedemo-tests:latest \
-          bash -c "cd tests && pytest --browser=$BROWSER --tags=$TAGS --test_data_file=test_data/test_data.json
+          bash -c "cd tests && pytest --browser=chrome --tags=all --test_data_file=test_data/test_data.json
         ../tests/test_login.py"
 
 
