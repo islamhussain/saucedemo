@@ -30,34 +30,19 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-
-    - name: Cache Docker layers
-      uses: actions/cache@v2
+    - name: Setup Python
+      uses: actions/setup-python@v4
       with:
-        path: /tmp/.buildx-cache
-        key: ${{ runner.os }}-buildx-${{ github.sha }}
-        restore-keys: |
-          ${{ runner.os }}-buildx-
-
-    - name: Build Docker image
+        python-version: 3.12
+    - name: Install dependencies
       run: |
-        docker build -t saucedemo-tests:latest .
-
+        pip install -r requirements.txt
     - name: Run tests
       run: |
-        docker run --rm \
-          -e BROWSER="${{ github.event.inputs.browser || 'chrome' }}" \
-          -e TAGS="${{ github.event.inputs.tags || 'all' }}" \
-          -e WORKERS="${{ github.event.inputs.workers || 'auto' }}" \
-          -e TEST_DATA="${{ github.event.inputs.test_data || 'test_data/test_data.json' }}" \
-          saucedemo-tests:latest \
-          bash -c "cd tests && pytest --browser=chrome --tags=all --test_data_file=test_data/test_data.json
+        bash -c "cd tests && pytest --browser=chrome --tags=all --test_data_file=test_data/test_data.json
         ../tests/test_login.py"
-
 
     - name: Upload test report
       if: success()
