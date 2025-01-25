@@ -1,11 +1,14 @@
+import tempfile
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
 
 def get_driver(browser='chrome', headless=False):
+    temp_dir = tempfile.mkdtemp()
     if browser == 'chrome':
         options = webdriver.ChromeOptions()
+        options.add_argument(f"--user-data-dir={temp_dir}")
         if headless:
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
@@ -13,6 +16,7 @@ def get_driver(browser='chrome', headless=False):
         driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     elif browser == 'firefox':
         options = webdriver.FirefoxOptions()
+        options.add_argument(f"--user-data-dir={temp_dir}")
         if headless:
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
