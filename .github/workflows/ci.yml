@@ -41,7 +41,7 @@ jobs:
         pip install -r requirements.txt
     - name: Run tests
       run: |
-        bash -c "cd tests && pytest --browser=chrome --tags=all --test_data_file=test_data/test_data.json
+        bash -c "cd tests && pytest --browser=chrome --tags=all --headless --test_data_file=test_data/test_data.json
         ../tests/test_login.py"
     - name: Upload test report
       if: success()
