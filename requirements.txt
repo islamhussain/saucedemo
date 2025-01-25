@@ -1,5 +1,5 @@
 pytest
-selenium
+selenium~=3.141.0
 pytest-html
 pytest-xdist
 pytest-metadata
