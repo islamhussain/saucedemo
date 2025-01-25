@@ -44,7 +44,7 @@ jobs:
         # Default values for inputs
         TAGS=${{ github.event.inputs.tags || 'smoke' }}
         WORKERS=${{ github.event.inputs.workers || 'auto' }}
-        TEST_DATA=${{ github.event.inputs.test_data || 'test_data' }}
+        TEST_DATA=${{ github.event.inputs.test_data || 'tests/test_data' }}
         BROWSER=${{ github.event.inputs.browser || 'chrome' }}
         
         # Execute tests with variables
