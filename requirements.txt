@@ -1,8 +1,9 @@
-pytest~=7.4.4
-selenium~=3.141.0
+pytest
+selenium
 pytest-html
 pytest-xdist
 pytest-metadata
 pyaml
 webdriver-manager
 pytest-dependency
+urllib3==1.26.16
