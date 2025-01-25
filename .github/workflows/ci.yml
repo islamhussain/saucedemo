@@ -48,7 +48,7 @@ jobs:
         BROWSER=${{ github.event.inputs.browser || 'chrome' }}
         
         # Execute tests with variables
-        bash -c "cd tests && pytest --browser=${BROWSER} --tags=${TAGS} -n=${WORKERS} --test_data_dir=${TEST_DATA} --headless"
+        bash -c "pytest --browser=${BROWSER} --tags=${TAGS} -n=${WORKERS} --test_data=${TEST_DATA} --headless"
     - name: Upload test report
       if: success()
       uses: actions/upload-artifact@v4

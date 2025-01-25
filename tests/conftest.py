@@ -1,3 +1,5 @@
+import os
+
 import pytest
 
 from tests.utils.data_loader import load_test_data, get_config_value, load_config
@@ -11,14 +13,11 @@ logger = get_logger()
 
 
 def resolve_test_data(obj):
-    test_data_dir = obj.config.getoption("--test_data_dir")
-    test_data_file = obj.config.getoption("--test_data_file")
-    if test_data_dir:
-        test_data = merge_test_data(directory=test_data_dir)
-    elif test_data_file:
-        test_data = merge_test_data(file_path=test_data_file)
+    test_data_path = obj.config.getoption("--test_data")
+    if os.path.isdir(test_data_path):
+        test_data = merge_test_data(directory=test_data_path)
     else:
-        raise ValueError("Either --test_data_dir or --test_data_file must be provided")
+        test_data = merge_test_data(file_path=test_data_path)
     return test_data
 
 
@@ -36,16 +35,14 @@ def driver(request):
     driver.quit()
 
 
-config = load_config("config/config.yaml")
+config = load_config("tests/config/config.yaml")
 
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default=get_config_value('browser', config['default']['browser']))
     parser.addoption("--tags", action="store", default=get_config_value('tags', config['default']['tags']))
     parser.addoption("--headless", action="store_true", default=False, help="Run tests in headless mode")
-    parser.addoption("--test_data_dir", action="store", default=None, help="Directory containing test data JSON files")
-    parser.addoption("--test_data_file", action="store", default=None,
-                     help="File path for a single test data JSON file")
+    parser.addoption("--test_data", action="store", default=None, help="Directory containing test data JSON files")
 
 
 def filter_test_cases(test_data, tags):
