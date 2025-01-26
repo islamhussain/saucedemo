@@ -34,14 +34,12 @@ This framework is designed for automated testing of the Swag Labs application us
 
 1. **Run all tests:**
    ```bash
-   cd tests
-   pytest --browser=chrome --headless --tags=all --test_data_dir=test_data/
+   pytest --browser=chrome --headless --tags=all --test_data=tests/test_data
    ```
 
 2. **Run specific tests:**
    ```bash
-   cd tests
-   pytest tests/test_product_page.py --browser=firefox --tags=smoke --test_data_file=tests/test_data/product_page.json
+   pytest tests/test_product_page.py --browser=firefox --tags=smoke --test_data=tests/test_data/product_page.json
    ```
 
 3. **Generate HTML report:**
